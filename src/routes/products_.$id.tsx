@@ -3,10 +3,9 @@ import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, CheckCircle2, AlertCircle, Loader2, Package, Truck, ShieldCheck } from "lucide-react";
 import { z } from "zod";
-import emailjs from "@emailjs/browser";
 import { Section } from "@/components/site/Section";
 import { PRODUCTS, formatNaira } from "@/data/products";
-import { EMAILJS_CONFIG, isEmailJsConfigured } from "@/lib/emailjs";
+import { FORMS_CONFIG, isFormsConfigured } from "@/lib/emailjs";
 
 export const Route = createFileRoute("/products_/$id")({
   loader: ({ params }) => {
@@ -66,30 +65,34 @@ function ProductDetailPage() {
     }
     setErrors({});
 
-    const payload = {
-      product_name: p.name,
-      product_id: p.id,
-      unit_price: formatNaira(p.price),
-      estimated_total: formatNaira(p.price * parsed.data.quantity),
-      from_name: parsed.data.fullName,
-      company: parsed.data.company || "—",
-      from_email: parsed.data.email,
-      phone: parsed.data.phone,
-      quantity: String(parsed.data.quantity),
-      delivery_location: parsed.data.deliveryLocation,
-      notes: parsed.data.notes || "—",
-      subject: `Purchase request: ${p.name}`,
-      message: `Customer wants to purchase ${parsed.data.quantity} × ${p.name}. Delivery to ${parsed.data.deliveryLocation}. Notes: ${parsed.data.notes || "none"}.`,
-    };
-
-    if (!isEmailJsConfigured()) {
-      setStatus({ kind: "error", message: "Order routing isn't fully configured yet. Please email info@kwagasandenergy.com or call +234 703 549 6294 quoting this product." });
+    if (!isFormsConfigured()) {
+      setStatus({ kind: "error", message: "Order routing isn't fully configured yet. Please email info@kwaenergyltd.com or call +234 703 549 6294 quoting this product." });
       return;
     }
 
     setStatus({ kind: "loading" });
     try {
-      await emailjs.send(EMAILJS_CONFIG.serviceId!, EMAILJS_CONFIG.productTemplateId!, payload, { publicKey: EMAILJS_CONFIG.publicKey! });
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: FORMS_CONFIG.accessKey,
+          subject: `Purchase request: ${p.name}`,
+          name: parsed.data.fullName,
+          company: parsed.data.company || "—",
+          email: parsed.data.email,
+          phone: parsed.data.phone,
+          product_name: p.name,
+          product_id: p.id,
+          quantity: String(parsed.data.quantity),
+          unit_price: formatNaira(p.price),
+          estimated_total: formatNaira(p.price * parsed.data.quantity),
+          delivery_location: parsed.data.deliveryLocation,
+          notes: parsed.data.notes || "—",
+          message: `Purchase request for ${parsed.data.quantity} × ${p.name}. Delivery to ${parsed.data.deliveryLocation}. Notes: ${parsed.data.notes || "none"}.`,
+        }),
+      });
+      if (!res.ok) throw new Error("Failed");
       setStatus({ kind: "success" });
       form.reset();
       setQty(1);

@@ -2,12 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
-import emailjs from "@emailjs/browser";
 import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { z } from "zod";
 import { Section, Eyebrow } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
-import { EMAILJS_CONFIG, isEmailJsConfigured } from "@/lib/emailjs";
+import { FORMS_CONFIG, isFormsConfigured } from "@/lib/emailjs";
 
 
 const ContactSchema = z.object({
@@ -47,24 +46,31 @@ export default function ContactPage() {
     }
     setErrors({});
 
-    if (!isEmailJsConfigured()) {
-      setStatus({ kind: "error", message: "Email sending isn't configured yet. Please email info@kwagasandenergy.com or call +234 703 549 6294." });
+    if (!isFormsConfigured()) {
+      setStatus({ kind: "error", message: "Email sending isn't configured yet. Please email info@kwaenergyltd.com or call +234 703 549 6294." });
       return;
     }
 
     setStatus({ kind: "loading" });
     try {
-      await emailjs.send(
-        EMAILJS_CONFIG.serviceId!,
-        EMAILJS_CONFIG.templateId!,
-        { from_name: parsed.data.fullName, from_email: parsed.data.email, phone: parsed.data.phone, subject: parsed.data.subject, message: parsed.data.message },
-        { publicKey: EMAILJS_CONFIG.publicKey! },
-      );
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: FORMS_CONFIG.accessKey,
+          name: parsed.data.fullName,
+          email: parsed.data.email,
+          phone: parsed.data.phone,
+          subject: parsed.data.subject,
+          message: parsed.data.message,
+        }),
+      });
+      if (!res.ok) throw new Error("Failed");
       setStatus({ kind: "success" });
       form.reset();
     } catch (err) {
       console.error(err);
-      setStatus({ kind: "error", message: "We couldn't send your message right now. Please try again or email info@kwagasandenergy.com." });
+      setStatus({ kind: "error", message: "We couldn't send your message right now. Please try again or email info@kwaenergyltd.com." });
     }
   }
 
@@ -102,7 +108,7 @@ export default function ContactPage() {
                 <Mail className="mt-1 h-5 w-5 text-[var(--brand-blue)]" />
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-widest text-[var(--brand-dark)]/50">Email</div>
-                  <a href="mailto:info@kwagasandenergy.com" className="mt-1 block text-lg font-semibold hover:text-[var(--brand-blue)]">info@kwagasandenergy.com</a>
+                  <a href="mailto:info@kwaenergyltd.com" className="mt-1 block text-lg font-semibold hover:text-[var(--brand-blue)]">info@kwaenergyltd.com</a>
                 </div>
               </li>
               <li className="flex gap-4">
