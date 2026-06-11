@@ -4,29 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kwa Gas CMS</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-<script>
-  // Handle Netlify Identity invite and recovery tokens
-  if (window.location.hash && window.location.hash.startsWith('#invite_token=')) {
-    window.location.href = '/admin/#' + window.location.hash.slice(1);
-  }
-  if (window.location.hash && window.location.hash.startsWith('#recovery_token=')) {
-    window.location.href = '/admin/#' + window.location.hash.slice(1);
-  }
-</script>
+      CMS.init({
+        config: {
+          backend: {
+            name: "github",
+            repo: "kingsmac1/kwa-energy-and-gas-new-2-cloudfare",
+            branch: "main",
+          },
+        },
+      });
+    </script>
   </body>
 </html>
