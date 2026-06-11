@@ -15,14 +15,32 @@
     "DPR / NMDPRA documentation included"
   ],
   "specs": [
-    { "label": "Storage capacity", "value": "25 MT (~50 m³)" },
-    { "label": "Working pressure", "value": "17.5 barg" },
-    { "label": "Material", "value": "Carbon steel SA-516 Gr.70" },
-    { "label": "Dispenser flow", "value": "100 L/min" },
-    { "label": "Footprint", "value": "12 m × 6 m" },
-    { "label": "Lead time", "value": "10 – 12 weeks" }
+    {
+      "label": "Storage capacity",
+      "value": "25 MT (~50 m³)"
+    },
+    {
+      "label": "Working pressure",
+      "value": "17.5 barg"
+    },
+    {
+      "label": "Material",
+      "value": "Carbon steel SA-516 Gr.70"
+    },
+    {
+      "label": "Dispenser flow",
+      "value": "100 L/min"
+    },
+    {
+      "label": "Footprint",
+      "value": "12 m × 6 m"
+    },
+    {
+      "label": "Lead time",
+      "value": "10 – 12 weeks"
+    }
   ],
-  "image": "https://images.unsplash.com/photo-1581094651181-35942459ef47?auto=format&fit=crop&w=1600&q=80",
+  "image": "https://www.cimcenric.com/data/watermark/20211203/61a9860229c26_.webp",
   "stock": "Made to Order",
   "leadTime": "10 – 12 weeks"
 }
