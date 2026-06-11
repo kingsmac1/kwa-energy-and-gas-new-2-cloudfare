@@ -89,7 +89,7 @@ function ProductDetailPage() {
 
     setStatus({ kind: "loading" });
     try {
-      await emailjs.send(EMAILJS_CONFIG.serviceId!, EMAILJS_CONFIG.templateId!, payload, { publicKey: EMAILJS_CONFIG.publicKey! });
+      await emailjs.send(EMAILJS_CONFIG.serviceId!, EMAILJS_CONFIG.productTemplateId!, payload, { publicKey: EMAILJS_CONFIG.publicKey! });
       setStatus({ kind: "success" });
       form.reset();
       setQty(1);
