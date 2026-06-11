@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: kingsmac1/kwa-energy-and-gas-new-2-cloudfare
   branch: main
+  base_url: https://kwaenergyltd.com
+  auth_endpoint: api/auth
 
 media_folder: public/images/uploads
 public_folder: /images/uploads
@@ -16,7 +19,7 @@ collections:
       - { label: Slug, name: slug, widget: string }
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Category, name: category, widget: string }
-      - { label: Date, name: date, widget: string }
+      - { label: Date, name: date, widget: datetime }
       - { label: Read Time, name: readTime, widget: string }
       - { label: Cover Image, name: cover, widget: image }
       - label: Body
