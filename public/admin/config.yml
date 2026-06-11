@@ -1,0 +1,55 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Category, name: category, widget: string }
+      - { label: Date, name: date, widget: string }
+      - { label: Read Time, name: readTime, widget: string }
+      - { label: Cover Image, name: cover, widget: image }
+      - label: Body
+        name: body
+        widget: list
+        field: { label: Paragraph, name: paragraph, widget: text }
+
+  - name: products
+    label: Products
+    folder: src/content/products
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: Name, name: name, widget: string }
+      - { label: Category, name: category, widget: string }
+      - { label: Price (Kobo), name: price, widget: number }
+      - { label: Unit, name: unit, widget: string }
+      - { label: Short Description, name: shortDescription, widget: text }
+      - { label: Description, name: description, widget: text }
+      - label: Features
+        name: features
+        widget: list
+        field: { label: Feature, name: feature, widget: string }
+      - label: Specifications
+        name: specs
+        widget: list
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Value, name: value, widget: string }
+      - { label: Image, name: image, widget: image }
+      - label: Stock Status
+        name: stock
+        widget: select
+        options: ["In Stock", "Made to Order", "Pre-Order"]
+      - { label: Lead Time, name: leadTime, widget: string }
