@@ -1,0 +1,28 @@
+{
+  "id": "ev-charger-dc-150kw",
+  "name": "DC Fast EV Charger — 150 kW",
+  "category": "EV Mobility",
+  "price": 18500000,
+  "unit": "per unit",
+  "shortDescription": "Dual-gun 150 kW DC fast charger for fleet depots, commercial parks and highway corridors.",
+  "description": "Liquid-cooled, dual-gun (CCS2 + CHAdeMO) 150 kW DC fast charger built for African grid conditions. OCPP 1.6/2.0.1 compliant, payment-terminal ready and remotely managed from our cloud back-office.",
+  "features": [
+    "150 kW output, dual-gun simultaneous",
+    "CCS2 + CHAdeMO connectors",
+    "OCPP 2.0.1 cloud-managed",
+    "Card / QR / RFID payment ready",
+    "Wide grid tolerance (300 – 480 V)",
+    "Liquid-cooled cables"
+  ],
+  "specs": [
+    { "label": "Output", "value": "150 kW" },
+    { "label": "Connectors", "value": "CCS2 + CHAdeMO" },
+    { "label": "Input voltage", "value": "AC 380 V ±20%" },
+    { "label": "Efficiency", "value": "≥ 95%" },
+    { "label": "Protection", "value": "IP55 / IK10" },
+    { "label": "Lead time", "value": "6 – 8 weeks" }
+  ],
+  "image": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=1600&q=80",
+  "stock": "In Stock",
+  "leadTime": "6 – 8 weeks"
+}

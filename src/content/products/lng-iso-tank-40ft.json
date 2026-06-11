@@ -1,0 +1,28 @@
+{
+  "id": "lng-iso-tank-40ft",
+  "name": "LNG ISO Tank Container — 40 ft / 45 m³",
+  "category": "LNG Logistics",
+  "price": 92000000,
+  "unit": "per container",
+  "shortDescription": "ISO-frame cryogenic LNG tank container, 45 m³, ideal for multi-modal LNG distribution.",
+  "description": "ISO-frame cryogenic LNG tank container for road, rail and sea transport of LNG. Vacuum-jacketed inner vessel for ultra-low boil-off, full LR/BV/ABS class certification and intermodal compatibility.",
+  "features": [
+    "45 m³ usable LNG capacity",
+    "Vacuum-perlite insulation",
+    "Boil-off rate ≤ 0.25%/day",
+    "LR / BV / ABS class certified",
+    "ISO 1496-3 intermodal frame",
+    "Bottom & top fill, vapour-return"
+  ],
+  "specs": [
+    { "label": "Capacity", "value": "45 m³ (≈ 18.5 t LNG)" },
+    { "label": "MAWP", "value": "8 barg" },
+    { "label": "Inner vessel", "value": "Stainless 304" },
+    { "label": "Boil-off rate", "value": "≤ 0.25% / day" },
+    { "label": "Frame", "value": "40 ft ISO" },
+    { "label": "Lead time", "value": "14 – 18 weeks" }
+  ],
+  "image": "https://images.unsplash.com/photo-1494412574745-0f56af89d8d2?auto=format&fit=crop&w=1600&q=80",
+  "stock": "Made to Order",
+  "leadTime": "14 – 18 weeks"
+}

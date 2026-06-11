@@ -1,0 +1,28 @@
+{
+  "id": "industrial-solar-100kwp",
+  "name": "Industrial Solar Hybrid System — 100 kWp",
+  "category": "Solar & Hybrid",
+  "price": 78000000,
+  "unit": "per system",
+  "shortDescription": "100 kWp grid-tied solar PV with 200 kWh battery storage and intelligent diesel hybridization.",
+  "description": "A complete commercial & industrial solar hybrid system engineered to deliver 24/7 reliable power while cutting diesel consumption by up to 70%. Tier-1 mono-PERC modules, hybrid inverters with grid-zero export control, lithium-iron-phosphate (LFP) battery cabinet and remote monitoring portal.",
+  "features": [
+    "100 kWp Tier-1 PV array",
+    "200 kWh LFP battery storage",
+    "Hybrid inverter with diesel synchronisation",
+    "Remote monitoring & analytics portal",
+    "10-year workmanship warranty",
+    "25-year module performance warranty"
+  ],
+  "specs": [
+    { "label": "Array size", "value": "100 kWp" },
+    { "label": "Battery", "value": "200 kWh LFP" },
+    { "label": "Inverter", "value": "100 kW hybrid (3-phase)" },
+    { "label": "Diesel savings", "value": "Up to 70%" },
+    { "label": "Roof / ground area", "value": "~600 m²" },
+    { "label": "Lead time", "value": "8 – 12 weeks" }
+  ],
+  "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
+  "stock": "In Stock",
+  "leadTime": "8 – 12 weeks"
+}

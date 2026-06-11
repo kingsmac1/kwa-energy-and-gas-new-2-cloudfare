@@ -1,0 +1,28 @@
+{
+  "id": "gas-turbine-5mw",
+  "name": "Refurbished Gas Turbine — 5 MW",
+  "category": "Power Generation",
+  "price": 950000000,
+  "unit": "per unit",
+  "shortDescription": "Factory-refurbished 5 MW industrial gas turbine package, fully tested and warrantied.",
+  "description": "A fully refurbished, performance-tested 5 MW gas turbine generator package. Each unit is stripped, NDT-inspected, recoated and reassembled with new wear parts. Comes with control system upgrade, exhaust silencer and 12-month operational warranty.",
+  "features": [
+    "5 MW continuous output",
+    "Dual-fuel (natural gas + diesel)",
+    "New Mark VIe control system",
+    "Exhaust silencer & SCR-ready",
+    "12-month operational warranty",
+    "Optional O&M contract"
+  ],
+  "specs": [
+    { "label": "Output", "value": "5 MW @ ISO" },
+    { "label": "Heat rate", "value": "~12,500 kJ/kWh" },
+    { "label": "Fuel", "value": "Natural gas / diesel" },
+    { "label": "Voltage", "value": "11 kV / 50 Hz" },
+    { "label": "Weight", "value": "~85 t (skid)" },
+    { "label": "Lead time", "value": "24 – 32 weeks" }
+  ],
+  "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80",
+  "stock": "Pre-Order",
+  "leadTime": "24 – 32 weeks"
+}

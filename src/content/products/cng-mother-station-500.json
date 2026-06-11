@@ -1,0 +1,28 @@
+{
+  "id": "cng-mother-station-500",
+  "name": "CNG Mother Station — 500 Nm³/h",
+  "category": "Gas Infrastructure",
+  "price": 185000000,
+  "unit": "per station",
+  "shortDescription": "Turnkey 500 Nm³/h CNG compression and dispensing station for fleet fueling and daughter-station supply.",
+  "description": "A complete, fully containerized CNG Mother Station designed for high-throughput fleet fueling and daughter-station bottling. Engineered for 24/7 industrial operation across Africa's commercial transport corridors. Includes inlet gas conditioning, two-stage compression, priority panel, storage cascade, dual-hose dispensers and full SCADA telemetry.",
+  "features": [
+    "500 Nm³/h compression capacity (expandable)",
+    "Dual-hose high-flow dispensers",
+    "Priority panel with cascade storage",
+    "ATEX / IECEx hazardous-area certification",
+    "Remote SCADA & telemetry ready",
+    "12-month commissioning warranty"
+  ],
+  "specs": [
+    { "label": "Capacity", "value": "500 Nm³/h" },
+    { "label": "Inlet pressure", "value": "4 – 25 bar" },
+    { "label": "Discharge pressure", "value": "250 bar" },
+    { "label": "Power", "value": "400V / 3-phase / 50Hz" },
+    { "label": "Footprint", "value": "20 ft + 40 ft container" },
+    { "label": "Lead time", "value": "16 – 22 weeks" }
+  ],
+  "image": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=1600&q=80",
+  "stock": "Made to Order",
+  "leadTime": "16 – 22 weeks"
+}

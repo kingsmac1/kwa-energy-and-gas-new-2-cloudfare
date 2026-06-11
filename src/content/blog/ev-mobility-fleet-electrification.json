@@ -1,0 +1,14 @@
+{
+  "slug": "ev-mobility-fleet-electrification",
+  "title": "Fleet electrification: what African operators get wrong about charging strategy",
+  "excerpt": "Charging is a network design problem, not a hardware purchase. Here's how we model it for commercial fleets.",
+  "category": "EV Mobility",
+  "date": "2026-02-18",
+  "readTime": "5 min read",
+  "cover": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1600&q=80",
+  "body": [
+    "Most fleet electrification programs stall not because the vehicles fail but because the charging network was procured before being designed.",
+    "Our advisory model starts with route, dwell, and energy density analysis — then layers depot, destination, and on-route charging in the right ratios for the duty cycle.",
+    "When done right, electrification cuts opex by 30–55% versus diesel equivalents at current Nigerian energy prices — but only if the underlying network is built around the operation, not the other way around."
+  ]
+}

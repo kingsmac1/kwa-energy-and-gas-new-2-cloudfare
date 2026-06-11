@@ -1,0 +1,14 @@
+{
+  "slug": "solar-mini-grids-industrial",
+  "title": "Solar mini-grids for industrial parks: design lessons from the field",
+  "excerpt": "What we've learned engineering hybrid solar + battery + gas systems for industrial loads.",
+  "category": "Solar",
+  "date": "2025-12-05",
+  "readTime": "5 min read",
+  "cover": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
+  "body": [
+    "Industrial loads don't behave like residential ones. Step changes, motor inrush, and 24/7 process heat all demand a hybrid architecture that residential solar designs simply don't address.",
+    "We size battery storage against actual load profiles, not nameplate ratings, and pair PV with gas-fired backup for true firm capacity.",
+    "The result is energy cost reductions of 35–60% with availability metrics that match or exceed grid supply."
+  ]
+}
