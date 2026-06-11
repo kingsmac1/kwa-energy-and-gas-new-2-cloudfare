@@ -15,14 +15,32 @@
     "Bottom & top fill, vapour-return"
   ],
   "specs": [
-    { "label": "Capacity", "value": "45 m³ (≈ 18.5 t LNG)" },
-    { "label": "MAWP", "value": "8 barg" },
-    { "label": "Inner vessel", "value": "Stainless 304" },
-    { "label": "Boil-off rate", "value": "≤ 0.25% / day" },
-    { "label": "Frame", "value": "40 ft ISO" },
-    { "label": "Lead time", "value": "14 – 18 weeks" }
+    {
+      "label": "Capacity",
+      "value": "45 m³ (≈ 18.5 t LNG)"
+    },
+    {
+      "label": "MAWP",
+      "value": "8 barg"
+    },
+    {
+      "label": "Inner vessel",
+      "value": "Stainless 304"
+    },
+    {
+      "label": "Boil-off rate",
+      "value": "≤ 0.25% / day"
+    },
+    {
+      "label": "Frame",
+      "value": "40 ft ISO"
+    },
+    {
+      "label": "Lead time",
+      "value": "14 – 18 weeks"
+    }
   ],
-  "image": "https://images.unsplash.com/photo-1494412574745-0f56af89d8d2?auto=format&fit=crop&w=1600&q=80",
+  "image": "https://img.directindustry.com/images_di/photo-mg/189452-11293907.jpg",
   "stock": "Made to Order",
   "leadTime": "14 – 18 weeks"
 }
